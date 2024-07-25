@@ -1,17 +1,8 @@
-import { cn } from "@/lib/utils";
-import {
-  IconPlaneTilt,
-  IconShieldCheck,
-  IconShip,
-  IconRoad,
-  IconReportSearch,
-  IconMessage
-} from "@tabler/icons-react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/all";
-import { useEffect, useRef } from "react";
-import MagicButton from "./Button";
-import Arrow from "./Arrow";
+"use client";
+import React, { useEffect, useRef } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/all';
+import { IconPlaneTilt, IconShip, IconRoad, IconReportSearch, IconShieldCheck, IconMessage } from '@tabler/icons-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -27,41 +18,37 @@ interface FeatureProps extends Feature {
 
 const Feature = ({ title, description, icon, index }: FeatureProps) => {
   const featureRef = useRef<HTMLDivElement>(null);
-  const iconRef = useRef<HTMLDivElement>(null);
-  const titleRef = useRef<HTMLSpanElement>(null);
-  const descriptionRef = useRef<HTMLParagraphElement>(null);
 
   useEffect(() => {
     const element = featureRef.current;
 
     gsap.fromTo(
       element,
-      { opacity: 0, y: 50 },
+      { opacity: 0, y: 100 },
       {
         opacity: 1,
         y: 0,
         duration: 1,
-        ease: 'power3.out',
+        ease: 'power1.inOut',
         scrollTrigger: {
           trigger: element,
-          start: 'top 80%',
-          end: 'top 50%',
-          scrub: true,
+          start: 'top 90%',
+          end: 'top 70%',
+          toggleActions: 'play none none reset',
         },
-        delay: index * 0.3,
+        delay: index * 0.6,
       }
     );
-}, [index]);
+  }, [index]);
 
   return (
     <div
       ref={featureRef}
-      className={cn(
-        "flex flex-col lg:border-r py-10 relative group/feature dark:border-scx-accent",
-        (index === 0 || index === 4) && "lg:border-l dark:border-scx-accent",
-        index < 3 && "lg:border-b dark:border-scx-accent",
-        index === 3 && "lg:border-l lg:border-r-0 dark:border-scx-accent"
-      )}
+      className={`flex flex-col lg:border-r py-10 relative group/feature dark:border-scx-accent ${
+        (index === 0 || index === 4) && 'lg:border-l dark:border-scx-accent'
+      } ${index < 3 && 'lg:border-b dark:border-scx-accent'} ${
+        index === 3 && 'lg:border-l lg:border-r-0 dark:border-scx-accent'
+      }`}
       style={{ boxSizing: 'border-box' }}
     >
       {index < 4 ? (
@@ -69,16 +56,16 @@ const Feature = ({ title, description, icon, index }: FeatureProps) => {
       ) : (
         <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-b from-neutral-100 dark:from-neutral-800 to-transparent pointer-events-none" />
       )}
-      <div className="mb-4 relative z-10 px-10 text-neutral-600 dark:text-neutral-400" ref={iconRef}>
+      <div className="mb-4 relative z-10 px-10 text-neutral-600 dark:text-neutral-400">
         {icon}
       </div>
       <div className="text-lg font-bold mb-2 relative z-10 px-10">
         <div className="absolute left-0 inset-y-0 h-6 group-hover/feature:h-8 w-1 rounded-tr-full rounded-br-full bg-neutral-300 dark:bg-neutral-700 group-hover/feature:bg-blue-500 transition-all duration-200 origin-center" />
-        <span className="group-hover/feature:translate-x-2 transition duration-200 inline-block text-scx-accent text-xl" ref={titleRef}>
+        <span className="group-hover/feature:translate-x-2 transition duration-200 inline-block text-scx-accent text-xl">
           {title}
         </span>
       </div>
-      <p className="text-base text-scx-default max-w-md relative z-10 px-10 subtitle" ref={descriptionRef}>
+      <p className="text-base text-scx-default max-w-md relative z-10 px-10 subtitle">
         {description}
       </p>
     </div>
@@ -131,7 +118,7 @@ export function FeaturesSectionDemo() {
       icon: <IconShieldCheck />,
     },
     {
-      title: "Fale Conosco",
+      title: "Nosso atendimento",
       description:
         "Se você está interessado em nossa tarifa, solicite uma cotação. Responderemos em 24 horas. Esteja ciente de que também oferecemos soluções para sua melhor logística.",
       icon: <IconMessage />,
@@ -140,5 +127,3 @@ export function FeaturesSectionDemo() {
 
   return <FeaturesGrid features={features} />;
 }
-
-export default FeaturesSectionDemo;

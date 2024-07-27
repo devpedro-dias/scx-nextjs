@@ -138,7 +138,7 @@ export const FadeInDiv = ({
 
 export const AccordionItem = ({ title, descriptions }: AccordionItemProps) => (
   <div className="bg-gradient-to-tr from-scx-darker to-scx-default p-4 sm:p-6 md:p-8 lg:p-10 rounded-xl mt-10">
-    <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-2 text-scx-text">{title}</h2>
+    <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-6 text-scx-text">{title}</h2>
     <ul className="list-disc list-inside text-sm sm:text-base">
       {descriptions.map((description, index) => (
         <li key={index} className="py-1 text-scx-text">

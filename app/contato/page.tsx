@@ -1,9 +1,6 @@
-import Contato from "./components/Contato";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import ServicesSectionHome from "./components/ServicesSectionHome";
-import { Spotlight } from "./components/ui/Spotlight";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
+import { Spotlight } from "../components/ui/Spotlight";
 
 
 export default function Home() {
@@ -26,9 +23,7 @@ export default function Home() {
       <div className="z-999 overflow-hidden">
         <div className="z-0">
           <Header />
-          <Hero />
-          <ServicesSectionHome />
-          <Contato />
+
           <Footer />
         </div>
       </div>

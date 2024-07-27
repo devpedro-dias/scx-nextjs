@@ -1,8 +1,6 @@
 
 import type { Config } from "tailwindcss"
 
-
-
 const config = {
   content: [
     './pages/**/*.{ts,tsx}',
@@ -22,6 +20,7 @@ const config = {
         accent: "#225c6a",
         darker: "#1a454f",
         text: "#f0f0f0",
+        gradient: "linear-gradient(24deg, rgba(26,69,79,1) 0%, rgba(49,133,155,1) 100%)"
       }
     },
     extend: {
@@ -57,3 +56,4 @@ const config = {
 
 
 export default config
+

@@ -36,7 +36,7 @@ const Feature = ({ title, description, icon, index }: FeatureProps) => {
           end: 'top 70%',
           toggleActions: 'play none none reset',
         },
-        delay: index * 0.6,
+        delay: index * 0.3,
       }
     );
   }, [index]);

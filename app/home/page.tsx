@@ -1,10 +1,9 @@
-import Contato from "./components/Contato";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import ServicesSectionHome from "./components/ServicesSectionHome";
-import { Spotlight } from "./components/ui/Spotlight";
-
+import Header from "../components/Header";
+import Hero from "../components/Hero";
+import Contato from "../components/Contato";
+import { Spotlight } from "../components/ui/Spotlight";
+import Footer from "../components/Footer";
+import ServicesSectionHome from "../components/ServicesSectionHome";
 
 export default function Home() {
   return (

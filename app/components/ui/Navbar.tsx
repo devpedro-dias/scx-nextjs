@@ -1,8 +1,6 @@
 "use client";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-import { useState } from "react";
-import { useMotionValueEvent, useScroll } from "framer-motion";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
@@ -16,28 +14,6 @@ export const Navbar = ({
   }[];
   className?: string;
 }) => {
-  
-  const { scrollYProgress } = useScroll();
-
-  const [visible, setVisible] = useState(true);
-
-  useMotionValueEvent(scrollYProgress, "change", (current) => {
-    // Check if current is not undefined and is a number
-    if (typeof current === "number") {
-      let direction = current! - scrollYProgress.getPrevious()!;
-
-      if (scrollYProgress.get() < 0.05) {
-        // also set true for the initial state
-        setVisible(true);
-      } else {
-        if (direction < 0) {
-          setVisible(true);
-        } else {
-          setVisible(false);
-        }
-      }
-    }
-  });
 
   useGSAP(() => {
     gsap.fromTo('#navbar',{
@@ -54,7 +30,7 @@ export const Navbar = ({
   }, []);
   
   return (
-    <nav id="navbar" className="bg-transparent p-4 mx-auto w-full sm:max-w-[90vw] md:max-w-[80vw] lg:max-w-[75vw] z-0">
+    <nav id="navbar" className="bg-transparent p-4 mx-auto w-full sm:max-w-[90vw] md:max-w-[80vw] lg:max-w-[75vw] z-0 overflow-hidden">
       <div className="flex items-center justify-between bg-transparent">
         <div className="z-0 md:hidden">
           <Link href="/home">

@@ -14,7 +14,8 @@ type Tab = {
 
 type AccordionItemProps = {
   title: string;
-  descriptions: string[];
+  descriptions: { title: string; details: string }[];
+  imageSrc?: string;
 };
 
 export const Tabs = ({
@@ -113,7 +114,7 @@ export const FadeInDiv = ({
   };
 
   return (
-    <div className="relative w-full h-auto">
+    <div className="relative w-full h-auto sm:mb-[10rem] xl:mb-96">
       {tabs.map((tab, idx) => (
         <motion.div
           key={tab.value}
@@ -136,15 +137,50 @@ export const FadeInDiv = ({
   );
 };
 
-export const AccordionItem = ({ title, descriptions }: AccordionItemProps) => (
-  <div className="bg-gradient-to-tr from-scx-darker to-scx-default p-4 sm:p-6 md:p-8 lg:p-10 rounded-xl mt-10">
-    <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-6 text-scx-text">{title}</h2>
-    <ul className="list-disc list-inside text-sm sm:text-base">
-      {descriptions.map((description, index) => (
-        <li key={index} className="py-1 text-scx-text">
-          {description}
-        </li>
-      ))}
-    </ul>
-  </div>
-);
+export const AccordionItem = ({
+  title,
+  descriptions,
+  imageSrc,
+}: AccordionItemProps) => {
+  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
+
+  const toggleExpand = (index: number) => {
+    setExpandedIndex(expandedIndex === index ? null : index);
+  };
+
+  return (
+    <div className="flex flex-col xl:flex-row bg-gradient-to-tr from-scx-darker to-scx-default p-4 sm:p-6 md:p-8 lg:p-10 gap-4 rounded-xl mt-10">
+      <div className="flex-1">
+        <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-6 text-scx-text">{title}</h2>
+        <ul className="list-disc list-inside text-base lg:text-lg">
+          {descriptions.map((description, index) => (
+            <li key={index} className="py-2 text-scx-text relative text-base md:text-xl">
+              <button
+                onClick={() => toggleExpand(index)}
+                className="absolute right-0 top-0 text-sm text-scx-text"
+              >
+                {expandedIndex === index ? "▲" : "▼"}
+              </button>
+                {description.title}
+              {expandedIndex === index && (
+                <motion.div
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: "auto" }}
+                  transition={{ duration: 0.3 }}
+                  className="my-4 text-sm md:text-base text-scx-light px-6 text-justify"
+                >
+                  {description.details}
+                </motion.div>
+              )}
+            </li>
+          ))}
+        </ul>
+      </div>
+      {imageSrc && (
+        <div className="my-auto mx-auto xl:mx-6 flex-shrink-0">
+          <img src={imageSrc} alt={title} className="mt-6 mx-auto w-[40%] h-auto lg:w-52 lg:h-52 object-cover" />
+        </div>
+      )}
+    </div>
+  );
+};

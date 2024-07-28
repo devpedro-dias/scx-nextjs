@@ -13,16 +13,6 @@ import { FlipWordsHome } from "./ui/FlipWordsHome";
 function Hero() {
 
   useGSAP(() => {
-    gsap.fromTo('#subtitle-hero', {
-      opacity: 0,
-      x: -200,
-      ease: "power3.inOut"
-    },
-      {
-        opacity: 1,
-        duration: 1.2,
-        x: 0,
-      }),
       gsap.fromTo('#title-hero', {
         opacity: 0,
         x: -200,
@@ -51,7 +41,7 @@ function Hero() {
         <div>
           <div className="flex h-3/4 text-scx-default mx-auto gap-4 my-16 sm:max-w-[90vw] md:max-w-[80vw] lg:max-w-[75vw] overflow-hidden">
             <div className="relative z-10 max-w-[50%] flex flex-col gap-2 md:mt-[2em] justify-between overflow-hidden">
-              <div> 
+              <div id="title-hero"> 
                 <FlipWordsHome />
               </div>
               <div id="button" className="text-scx-text">

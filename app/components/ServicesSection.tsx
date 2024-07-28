@@ -12,7 +12,7 @@ const ServicesSection = () => {
                 Conectando você aos principais mercados mundiais.
               </p>
           </div>
-            <div>
+            <div className='mt-[10rem] sm:mt-[15rem] md:mt-[0rem] md:mb-[5rem] lg:mt-0 lg:mb-[28rem] xl:mb-[15rem]'>
                 <TabsDemo />
             </div>
         </section>

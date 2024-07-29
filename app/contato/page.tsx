@@ -1,4 +1,5 @@
 import Footer from "../components/Footer";
+import Form from "../components/Form";
 import Header from "../components/Header";
 import { Spotlight } from "../components/ui/Spotlight";
 
@@ -23,7 +24,12 @@ export default function Home() {
       <div className="z-999 overflow-hidden">
         <div className="z-0">
           <Header />
+          <div>
+            <h1>Fale Conosco</h1>
 
+            <p>Se você está interessado em nossa tarifa, solicite uma cotação. Responderemos em 24 horas. Esteja ciente de que também oferecemos soluções para sua melhor logística.</p>
+          </div>
+          <Form />          
           <Footer />
         </div>
       </div>

@@ -21,8 +21,18 @@ function Hero() {
         {
           opacity: 1,
           duration: 1.2,
+          delay: 1,
           x: 0,
         }),
+        gsap.fromTo('#globe', {
+          opacity: 0,
+          ease: "power3.inOut",
+        },
+          {
+            opacity: 1,
+            duration: 1.2,
+            delay: 1,
+          }),
         gsap.fromTo('#button', {
           opacity: 0,
           x: -200,
@@ -31,6 +41,7 @@ function Hero() {
           {
             opacity: 1,
             duration: 1.2,
+            delay: 1,
             x: 0,
           });
   }, []);
@@ -50,7 +61,7 @@ function Hero() {
                 </Link>
               </div>
             </div>
-            <div className="z-0 w-fit overflow-hidden">
+            <div className="z-0 w-fit overflow-hidden" id="globe">
               <GridGlobe />
             </div>
           </div>

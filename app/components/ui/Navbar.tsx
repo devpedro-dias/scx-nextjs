@@ -25,7 +25,8 @@ export const Navbar = ({
     { 
       y: 0,
       opacity: 1,
-      duration: 1.2
+      duration: 1.2,
+      delay: 1
     })
   }, []);
   

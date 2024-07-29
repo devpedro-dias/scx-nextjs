@@ -63,4 +63,4 @@ export const servicesItems = [
 ];
 
 export const homeWords = ["ágeis", "confiáveis", "completas", "integradas"];
-export const serviceWords = ["serviço", "frete"];
+export const serviceWords = ["serviço", "operação", "transporte"];

@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import TabsDemo from './ui/TabsDemo'
 import { FlipWordsService } from './ui/FlipWordsService'

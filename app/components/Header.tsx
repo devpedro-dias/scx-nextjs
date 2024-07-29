@@ -1,3 +1,4 @@
+"use client"
 import { navItems } from "@/data";
 import Navbar from "./ui/Navbar";
 

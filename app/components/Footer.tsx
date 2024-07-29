@@ -5,7 +5,7 @@ import { IconBrandFacebook, IconBrandLinkedin, IconBrandTwitter, } from "@tabler
 const Footer = () => {
   return (
     <div className="mt-2 overflow-hidden">
-      <footer className="bg-gray-800 text-white md:py-32 mt-52 md:mt-[28rem] lg:mt-36 z-0 overflow-hidden">
+      <footer className="bg-gray-800 text-white md:py-32 mt-[26rem] sm:mt-[20rem] md:mt-[28rem] lg:mt-36 z-0 overflow-hidden">
         <div className="container mx-auto px-4 text-scx-accent overflow-hidden">
           <div className="flex flex-col items-center xl:flex-row justify-between gap-4 text-center xl:items-start xl:text-left overflow-hidden">
             <div className="flex-1 min-w-[200px] mb-6 z-0">

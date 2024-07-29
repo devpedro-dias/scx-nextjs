@@ -22,12 +22,12 @@ export default function Home() {
       </div>
 
       <div className="z-999 overflow-hidden">
-        <div className="z-0">
+        <div className="z-0 sm:max-w-[90vw] md:max-w-[80vw] lg:max-w-[75vw] mx-auto ">
           <Header />
-          <div>
-            <h1>Fale Conosco</h1>
+          <div className="text-scx-default text-center flex flex-col gap-10 mt-10 justify-center items-center">
+            <h1 className="text-lg sm:text-2xl lg:text-3xl xl:text-4xl">Fale Conosco</h1>
 
-            <p>Se você está interessado em nossa tarifa, solicite uma cotação. Responderemos em 24 horas. Esteja ciente de que também oferecemos soluções para sua melhor logística.</p>
+            <p className="text-base sm:text-lg lg:text-xl">Se você está interessado em nossa tarifa, solicite uma cotação. Responderemos em 24 horas. Esteja ciente de que também oferecemos soluções para sua melhor logística.</p>
           </div>
           <Form />          
           <Footer />

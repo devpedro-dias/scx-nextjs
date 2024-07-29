@@ -69,7 +69,7 @@ const Form = () => {
   }, []);
 
   return (
-    <div className="bg-scx-default text-scx-text p-6 rounded-lg max-w-md sm:mx-auto mx-2 mt-20" id="form">
+    <div className="bg-scx-default text-scx-text p-6 rounded-lg max-w-xl sm:mx-auto mx-2 mt-20" id="form">
       <form className="space-y-4" onSubmit={handleSubmit}>
         <div>
           <LabelComponent htmlFor="name">Nome</LabelComponent>

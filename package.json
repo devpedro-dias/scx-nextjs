@@ -10,11 +10,13 @@
   },
   "dependencies": {
     "@gsap/react": "^2.1.1",
+    "@radix-ui/react-label": "^2.1.0",
     "@react-three/drei": "^9.109.1",
     "@react-three/fiber": "^8.16.8",
     "@svgr/webpack": "^8.1.0",
     "@tabler/icons-react": "^3.11.0",
     "clsx": "^2.1.1",
+    "emailjs-com": "^3.2.0",
     "framer-motion": "^11.3.17",
     "gsap": "^3.12.5",
     "mini-svg-data-uri": "^1.4.4",

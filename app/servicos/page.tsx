@@ -5,7 +5,7 @@ import { Spotlight } from "../components/ui/Spotlight";
 import { Tabs } from "../components/ui/Tabs";
 
 
-export default function Home() {
+export default function Servico() {
   return (
     <main
       className="overflow-hidden max-w-[100vw] max-h-full"

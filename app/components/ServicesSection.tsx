@@ -2,8 +2,24 @@
 import React from 'react'
 import TabsDemo from './ui/TabsDemo'
 import { FlipWordsService } from './ui/FlipWordsService'
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap'
 
 const ServicesSection = () => {
+  useGSAP(() => {
+    gsap.fromTo('#subtitle-hero',{
+      y: -300,
+      opacity: 0,
+      ease: "power3.inOut",
+      duration: 1.2,
+    },
+    { 
+      y: 0,
+      opacity: 1,
+      duration: 1.2,
+      delay: 1.4,
+    })
+  }, []);
   return (
     <div>
         <section className='sm:max-w-[90vw] md:max-w-[80vw] lg:max-w-[75vw]'>

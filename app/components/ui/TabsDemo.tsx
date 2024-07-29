@@ -1,4 +1,6 @@
+import { useGSAP } from "@gsap/react";
 import { AccordionItem, Tabs } from "./Tabs";
+import gsap from "gsap";
 
 export default function TabsDemo() {
   const servicesItems = [
@@ -131,8 +133,23 @@ export default function TabsDemo() {
     </div>
   }));
 
+  useGSAP(() => {
+    gsap.fromTo('#tabs-anim',{
+      y: -300,
+      opacity: 0,
+      ease: "power3.inOut",
+      duration: 1.2,
+    },
+    { 
+      y: 0,
+      opacity: 1,
+      duration: 1.2,
+      delay: 1.4,
+    })
+  }, []);
+
   return (
-    <div className="h-[20rem] md:h-[30rem] [perspective:1000px] relative flex flex-col max-w-6xl mx-auto w-full items-start justify-center my-40 z-0">
+    <div className="h-[20rem] md:h-[30rem] [perspective:1000px] relative flex flex-col max-w-6xl mx-auto w-full items-start justify-center my-40 z-0" id="tabs-anim">
       <Tabs
         tabs={servicesItems.map(item => ({
           title: item.title,

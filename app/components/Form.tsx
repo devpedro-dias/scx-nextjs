@@ -64,7 +64,8 @@ const Form = () => {
     { 
       y: 0,
       opacity: 1,
-      duration: 1.2
+      duration: 1.2,
+      delay: 1.6,
     })
   }, []);
 

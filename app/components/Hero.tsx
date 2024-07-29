@@ -48,7 +48,7 @@ function Hero() {
 
   return (
     <section className="relative w-full h-full overflow-hidden">
-      <div className="relative top-0 left-6 min-w-full min-h-[45vh] overflow-hidden">
+      <div className="relative top-0 left-2 min-w-full min-h-[45vh] overflow-hidden">
         <div>
           <div className="flex h-3/4 text-scx-default mx-auto gap-4 my-16 sm:max-w-[90vw] md:max-w-[80vw] lg:max-w-[75vw] overflow-hidden">
             <div className="relative z-10 max-w-[50%] flex flex-col gap-2 md:mt-[2em] justify-between overflow-hidden">

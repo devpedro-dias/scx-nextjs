@@ -34,14 +34,14 @@ const Footer = () => {
               <h2 className="text-lg font-semibold mb-4 lg:text-2xl">Contato</h2>
               <ul className="space-y-2 text-scx-default">
                 <li>
-                  <a className="hover:underline cursor-default">(13) 3321-5574</a>
+                  <a className="hover:underline cursor-default">(00) 0000-0000</a>
                 </li>
                 <li>
                   <a
-                    href="mailto:scx@scxagenciamentos.com"
+                    href="mailto:example@example.com"
                     className="hover:underline"
                   >
-                    scx@scxagenciamentos.com
+                    example@example.com
                   </a>
                 </li>
               </ul>
@@ -53,7 +53,7 @@ const Footer = () => {
               <ul className="flex space-x-4 text-scx-default">
                 <li>
                   <a
-                    href="https://www.linkedin.com/in/scxagenciamentos-5a060b109?trk=nav_responsive_tab_profile/"
+                    href="#"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-scx-default hover:text-scx-accent"
@@ -63,7 +63,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <a
-                    href="https://www.facebook.com/SCXAGENCIAMENTOS/"
+                    href="#"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-scx-default hover:text-scx-accent"
@@ -73,7 +73,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <a
-                    href="https://www.twitter.com/SCXAGENCIAMENTO"
+                    href="#"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-scx-default hover:text-scx-accent"

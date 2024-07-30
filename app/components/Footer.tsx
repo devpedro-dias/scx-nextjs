@@ -50,7 +50,7 @@ const Footer = () => {
             {/* Redes Sociais */}
             <div className="flex-1 min-w-[200px] mb-6 z-0">
               <h2 className="text-lg font-semibold mb-4 lg:text-2xl">Redes Sociais</h2>
-              <ul className="flex space-x-4 text-scx-default">
+              <ul className="flex justify-center xl:justify-start space-x-4 text-scx-default">
                 <li>
                   <a
                     href="#"
